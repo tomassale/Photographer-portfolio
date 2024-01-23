@@ -1,7 +1,10 @@
+import MouseFollower from "./mouse/MouseFollower"
+
 const Knowledge = () => {
   return (
     <div className='knowledge' id='knowledge'>
-      Knowledge
+      
+      <MouseFollower/>
     </div>
   )
 }

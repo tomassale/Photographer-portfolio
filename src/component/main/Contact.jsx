@@ -1,7 +1,10 @@
+import MouseFollower from "./mouse/MouseFollower"
+
 const Contact = () => {
   return (
     <div className='contact' id='contact'>
-      Contact
+      
+      <MouseFollower/>
     </div>
   )
 }
