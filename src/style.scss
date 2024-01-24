@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   list-style: none;
   overflow: hidden;
   a {
@@ -11,7 +12,7 @@
   }
 }
 
-@mixin divs {
+@mixin div {
   width: 100vw;
   height: 100vh;
 }
@@ -82,21 +83,57 @@ body{
       }
     }
     .intro {
-      @include divs;
+      @include div;
     }
     .booking {
-      @include divs;
+      @include div;
     }
     .knowledge {
-      @include divs;
+      @include div;
     }
     .contact {
-      @include divs;
+      @include div;
     }
     .footer {
-      position: fixed;
-      bottom: 0;
-      background-color: rgb(235, 235, 235);
+      color: white;
+      height: 35vh;
+      hr{
+        width: 97vw;
+        margin: auto;
+        border-radius: 20%;
+      }
+      .info{
+        display: flex;
+        div{
+          width: 33vw;
+          text-align: center;
+          height: 30vh;
+          padding-top: 20px;
+          hr{
+            width: 25%;
+            margin-top: 5px;
+          }
+          ul{
+            li{
+              margin-top: 10px;
+              font-size: 18px;
+              a {
+                border-bottom: 1px solid #ffffff;
+              }
+            }
+          }
+        }
+      }
+      h2{
+        text-align: center;
+        a{
+          color: rgba(255,255,255,0.6);
+          transition: color 0.6s ease, filter 0.6s ease;
+          &:hover{
+            color: rgba(255,255,255,0.9);
+          }
+        }
+      }
     }
   }
 }

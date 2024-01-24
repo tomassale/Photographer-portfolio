@@ -16,7 +16,6 @@ const App = () => {
       <Knowledge/>
       <hr/>
       <Contact/>
-      <hr/>
       <Footer/>
     </>
   )
