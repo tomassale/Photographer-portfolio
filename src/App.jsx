@@ -1,24 +1,22 @@
+import { Route, Routes, BrowserRouter } from 'react-router-dom'
+import GalleryListContainer from './component/main/GalleryList'
+import GalleryDetailContainer from './component/main/detail/GalleryDetailContainer'
+import MouseFollower from './component/main/util/MouseFollower'
 import Navbar from './component/header/Navbar'
-import Intro from './component/main/Intro'
-import Booking from './component/main/Booking'
-import Knowledge from './component/main/knowledge/Knowledge'
-import Contact from './component/main/Contact'
 import Footer from './component/footer/Footer'
-import MouseFollower from './component/main/mouse/MouseFollower'
 
 const App = () => {
   return(
     <>
-      <Navbar/>
-      <Intro/>
-      <hr/>
-      <Knowledge/>
-      <hr/>
-      <Booking/>
-      <hr/>
-      <Contact/>
-      <MouseFollower/>
-      <Footer/>
+    <Navbar/>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<GalleryListContainer/>}/>
+          <Route path='/Gallery/:id' element={<GalleryDetailContainer/>}/>
+        </Routes>
+      </BrowserRouter>
+    <MouseFollower/>
+    <Footer/>
     </>
   )
 }
