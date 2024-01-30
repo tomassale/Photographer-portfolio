@@ -1,5 +1,5 @@
 import Initial from './section/Initial'
-import Artist from './artist/Artist'
+import Artist from './section/ItemGallery'
 
 const Gallery = () => {
   return (
