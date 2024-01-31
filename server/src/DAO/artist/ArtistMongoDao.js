@@ -7,12 +7,12 @@ class ArtistMongoDAO extends MongoDbContainer {
   }
 
   async getAll() {
-    return await super.getAll().Artists
+    return await super.getAll().Artist
   }
 
   async getById(id){
-    return await super.getById(id).Artists
-  }
+    return await super.getById(id).Artist
+  } 
 
   static getInstance(url){
     if(!this.instance){

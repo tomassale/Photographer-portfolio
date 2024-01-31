@@ -3,20 +3,20 @@ class Service {
     this.dao = dao
   }
 
-  async getDocument(filter, populateFields) {
-    return await this.dao.getDocument(filter, populateFields)
+  async getDocument(filter) {
+    return await this.dao.getDocument(filter)
   }
 
-  async save(entity) {
-    return await this.dao.save(entity)
+  async save(obj) {
+    return await this.dao.save(obj)
   }
 
-  async getById(id, populateFields) {
-    return await this.dao.getById(id, populateFields)
+  async getById(id) {
+    return await this.dao.getById(id)
   }
 
-  async getAll(filter, populateFields) {
-    return await this.dao.getAll(filter, populateFields)
+  async getAll() {
+    return await this.dao.getAll()
   }
 
   async update(id, entity) {
@@ -26,7 +26,6 @@ class Service {
   async deleteById(id) {
     return await this.dao.deleteById(id)
   }
-
 }
 
 module.exports = { Service }

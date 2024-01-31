@@ -18,8 +18,7 @@ class MongoDbContainer {
 
   async getAll() {
     try {
-      let result = await this.model.find()
-      return result ?? null
+      return (await this.model.find()) ?? null
     } catch (e) {
       throw new Error(e)
     }
@@ -27,8 +26,7 @@ class MongoDbContainer {
 
   async getById(id) {
     try {
-      let result = await this.model.findById(id)
-      return result ?? null
+      return (await this.model.findById(id)) ?? null
     } catch (e) {
       throw new Error(e)
     }
@@ -44,8 +42,7 @@ class MongoDbContainer {
 
   async deleteById(id) {
     try {
-      let result = await this.model.findByIdAndDelete(id)
-      return result ?? null
+      return (await this.model.findByIdAndDelete(id)) ?? null
     } catch (e) {
       throw new Error(e)
     }
@@ -53,8 +50,7 @@ class MongoDbContainer {
 
   async save(newModel) {
     try {
-      let result = await newModel.save()
-      return result
+      return await newModel.save()
     } catch (e) {
       throw new Error(e)
     }
@@ -62,8 +58,7 @@ class MongoDbContainer {
 
   async update(id, newObj) {
     try {
-      let result = await this.model.findByIdAndUpdate(id, newObj)
-      return result
+      return await this.model.findByIdAndUpdate(id, newObj)
     } catch (e) {
       throw new Error(e)
     }
@@ -71,8 +66,7 @@ class MongoDbContainer {
 
   async findOneAndUpdate(filter, newObj, options = null) {
     try {
-      let result = await this.model.findOneAndUpdate(filter, newObj, options)
-      return result
+      return await this.model.findOneAndUpdate(filter, newObj, options)
     } catch (e) {
       throw new Error(e)
     }

@@ -7,7 +7,7 @@ const ItemGallery = ({name, title, n1, n2, n3}) => {
       <h1>{title.toUpperCase()}</h1>
       <div id={`${name}Image`}>
         {[n1, n2, n3].map((index) => (
-            <img key={index} src={imageSrc(index)} alt={`Imagen ${index} ${upper}`} />
+          <img key={index} src={imageSrc(index)} alt={`Imagen ${index} ${upper}`} />
         ))}
       </div>
     </div>
