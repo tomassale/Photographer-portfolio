@@ -1,0 +1,98 @@
+[
+  {
+    "id": 0,
+    "name": "cosquin",
+    "title": "cosquin rock",
+    "n1": 1,
+    "n2": 2,
+    "n3": 3
+  },
+  {
+    "id": 1,
+    "name": "pericos",
+    "title": "los pericos",
+    "n1": 1,
+    "n2": 5,
+    "n3": 7
+  },
+  {
+    "id": 2,
+    "name": "koinoYokan",
+    "title": "koino yokan",
+    "n1": 4,
+    "n2": 6,
+    "n3": 7
+  },
+  {
+    "id": 3,
+    "name": "ntvg",
+    "title": "no te va a gustar",
+    "n1": 2,
+    "n2": 6,
+    "n3": 9
+  },
+  {
+    "id": 4,
+    "name": "renga",
+    "title": "la renga",
+    "n1": 4,
+    "n2": 6,
+    "n3": 7
+  },
+  {
+    "id": 5,
+    "name": "rataBlanca",
+    "title": "rata blanca",
+    "n1": 2,
+    "n2": 3,
+    "n3": 8
+  },
+  {
+    "id": 6,
+    "name": "skay",
+    "title": "skay beilinson",
+    "n1": 3,
+    "n2": 4,
+    "n3": 7
+  },
+  {
+    "id": 7,
+    "name": "babasonicos",
+    "title": "babasonicos",
+    "n1": 1,
+    "n2": 2,
+    "n3": 6
+  },
+  {
+    "id": 8,
+    "name": "kapanga",
+    "title": "kapanga",
+    "n1": 1,
+    "n2": 6,
+    "n3": 7
+  },
+  {
+    "id": 9,
+    "name": "pastillasDelAbuelo",
+    "title": "las pastillas del abuelo",
+    "n1": 1,
+    "n2": 2,
+    "n3": 3
+  },
+  {
+    "id": 10,
+    "name": "parraleños",
+    "title": "parraleños",
+    "n1": 1,
+    "n2": 2,
+    "n3": 3
+  },
+  {
+    "id": 11,
+    "name": "asspera",
+    "title": "asspera",
+    "n1": 1,
+    "n2": 3,
+    "n3": 4
+  }
+]
