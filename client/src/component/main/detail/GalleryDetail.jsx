@@ -1,4 +1,7 @@
 const GalleryDetail = ({fileDetail}) => {
+
+  
+
   return (
     <div className="galleryDetail">
       

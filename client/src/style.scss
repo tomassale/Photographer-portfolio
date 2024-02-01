@@ -1,3 +1,4 @@
+//Imports
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
 
 * {
@@ -14,11 +15,25 @@
   }
 }
 
+//Mixins
 @mixin div {
   width: 100vw;
   height: 100vh;
 }
 
+//Keyframes
+@keyframes animloader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+//Styles
 html,
 body{
   background-color: #1b1b1b;
@@ -57,6 +72,29 @@ body{
       filter: blur(10px);
       transform: translate(-50%, -50%);
     }
+    .loader {
+      width: 48px;
+      height: 48px;
+      display: inline-block;
+      position: relative;
+      &
+      ::after,
+      ::before{
+        content: '';  
+        box-sizing: border-box;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 2px solid #FFF;
+        position: absolute;
+        left: 0;
+        top: 0;
+        animation: animloader 2s linear infinite;
+      }
+      &::after{
+        animation-delay: 1s;
+      }
+    }
     .navbar {
       z-index: 3;
       display: flex;
@@ -91,11 +129,15 @@ body{
       }
       .itemGallery{
         @include div;
-        img{
+        .imageMain{
           width: 33vw;
           height: 33vh;
           user-select: none;
           -webkit-user-drag: none;            
+          transition: transform 0.3s ease-in;
+          &:hover{
+            transform: scale(1.02);
+          }
         }
       }
       #asspera{

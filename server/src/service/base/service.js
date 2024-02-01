@@ -19,8 +19,8 @@ class Service {
     return await this.dao.getAll()
   }
 
-  async update(id, entity) {
-    return await this.dao.update(id, entity)
+  async update(id, obj) {
+    return await this.dao.update(id, obj)
   }
 
   async deleteById(id) {
