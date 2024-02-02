@@ -12,7 +12,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Gallery/>}/>
-          <Route path='/Gallery/:id' element={<GalleryDetailContainer/>}/>
+          <Route path='/:id' element={<GalleryDetailContainer/>}/>
         </Routes>
       </BrowserRouter>
     <MouseFollower/>

@@ -1,17 +1,17 @@
 import Initial from './section/Initial'
 import Loader from './util/Loader'
 import Artist from './section/ItemGallery'
-import data from '../../data/artist.json'
+import artist from '../../data/artist.json'
 
 const Gallery = () => {
   return (
     <div className='gallery'>
       <Initial/>
-      {!data ?(
+      {!artist ?(
         <Loader/>
       ):(
-        data.map((obj) => {
-          return <Artist key={obj.id} art={obj}/>
+        artist.map((obj) => {
+          return <Artist key={obj._id} art={obj}/>
         })
       )}
     </div>

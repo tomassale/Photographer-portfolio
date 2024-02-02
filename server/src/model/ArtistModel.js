@@ -1,6 +1,13 @@
-const { Schema, model } = require('mongoose')
+const { Schema, model, default: mongoose } = require('mongoose')
 
 const ArtistSchema = new Schema({
+  _id: {
+    type: mongoose.Schema.ObjectId, 
+    default:mongoose.Types.ObjectId, 
+    index: true, 
+    require: true,
+    unique: true
+  },
   name: {type: String, require: true, unique: true},
   title: {type: String, require: true, unique: true},
   n1: {type: Number, require:true},

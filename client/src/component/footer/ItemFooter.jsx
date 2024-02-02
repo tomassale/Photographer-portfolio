@@ -1,15 +1,13 @@
-const ItemFooter = ({title, }) => {
+const ItemFooter = ({footerItem}) => {
   return (
-    <div className="itemFooter">
-      <h3>Sección 1</h3>
-      <hr/>
-      <ul>
-        <li><a href='#link'>Lorem Ipsum</a></li>
-        <li><a href='#link'>Lorem Ipsum</a></li>
-        <li><a href='#link'>Lorem Ipsum</a></li>
-        <li><a href='#link'>Lorem Ipsum</a></li>
-      </ul>
-    </div>
+    <>
+      {footerItem.map((subobj)=>(
+        <li key={subobj._id}>
+          <a href={subobj.link}>{subobj.content}</a>
+        </li>
+      ))}
+    </>
+
   )
 }
 
