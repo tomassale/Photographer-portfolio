@@ -4,9 +4,9 @@ const ItemList = ({ footer }) => {
   return (
     <>
       {footer.map((obj) => (
-        <div key={obj.id} className="itemFooter">
+        <div key={obj._id} className="itemFooter">
           <h3>{obj.title}</h3>
-          <hr />
+          <hr/>
           <ul>
             <ItemFooter footerItem={obj.links} />
           </ul>
