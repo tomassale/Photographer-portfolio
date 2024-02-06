@@ -1,5 +1,5 @@
 import Initial from './section/Initial'
-import Loader from './util/Loader'
+import Loader from '../../util/Loader'
 import Artist from './section/ItemGallery'
 import artist from '../../data/artist.json'
 

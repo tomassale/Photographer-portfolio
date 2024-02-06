@@ -2,6 +2,9 @@ import ItemListFooter from "./ItemListFooter"
 import footer from '../../data/footer.json'
 
 const Footer = () => {
+
+  
+
   return (
     <footer className='footer'>
       <hr/>

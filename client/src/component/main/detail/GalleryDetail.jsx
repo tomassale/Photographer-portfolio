@@ -1,11 +1,13 @@
-const GalleryDetail = ({fileDetail}) => {
-
+const GalleryDetail = ({ images }) => {
+  if (!images || typeof images !== 'object' || Object.keys(images).length === 0) {
+    return <div>No images to display</div>;
+  }
   return (
-    <div className="galleryDetail">
-      {fileDetail.map((obj, index)=>(
-        <img key={index} src={obj} alt='imageGallery'/>
+    <>
+      {Object.values(images).map((src, index) => (
+        <img key={index} src={src} alt='imageGallery' />
       ))}
-    </div>
+    </>
   )
 }
 

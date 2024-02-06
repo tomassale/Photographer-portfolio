@@ -33,7 +33,7 @@ const ItemGallery = ({art}) => {
       <h1>{art.title.toUpperCase()}</h1>
       <div id={`${art.name}Image`}>
         {[art.n1, art.n2, art.n3].map((index) => (
-          <NavLink to={`/Gallery/${art.id}`}>
+          <NavLink to={`/Gallery/${art.name}`}>
             <img key={index} src={imageSrc(index)} className='imageMain' alt={`Imagen ${index} ${upper}`} />
           </NavLink>
         ))}

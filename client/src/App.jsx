@@ -1,7 +1,7 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import Gallery from './component/main/Gallery'
 import GalleryDetailContainer from './component/main/detail/GalleryDetailContainer'
-import MouseFollower from './component/main/util/MouseFollower'
+import MouseFollower from './util/MouseFollower'
 import Navbar from './component/header/Navbar'
 import Footer from './component/footer/Footer'
 
@@ -12,7 +12,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Gallery/>}/>
-          <Route path='/:id' element={<GalleryDetailContainer/>}/>
+          <Route path='Gallery/:_id' element={<GalleryDetailContainer/>}/>
         </Routes>
       </BrowserRouter>
     <MouseFollower/>

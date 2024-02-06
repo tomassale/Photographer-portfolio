@@ -1,18 +1,13 @@
-import { useEffect, useState } from "react"
-import GalleryDetail from "./GalleryDetail"
+import { useParams } from 'react-router-dom'
+import GalleryDetail from './GalleryDetail'
+import importImages from '../../../util/importImages'
 
 const GalleryDetailContainer = () => {
-  const [imagePaths, setImagePaths] = useState([])
-
-  useEffect(()=>{
-    const importAll = (r) => r.keys().map(r)
-    const imgs = importAll(require.context('../../../../public/img/asspera', false, /\.(png|jpe?g|svg)$/))
-    setImagePaths(imgs)
-  },[])
-
+  const { _id } = useParams()
+  const images = importImages(_id)
   return (
-    <div className="galleryDetailContainer">
-      <GalleryDetail fileDetail={imagePaths}/>
+    <div className='galleryDetailContainer'>
+      <GalleryDetail images={images}/>
     </div>
   )
 }
