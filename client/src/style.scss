@@ -130,52 +130,57 @@ body{
       .itemGallery{
         @include div;
         .imageMain{
-          width: 33vw;
-          height: 33vh;
+          //width: 33vw;
+          //height: 33vh;
           user-select: none;
           -webkit-user-drag: none;            
-          transition: transform 0.3s ease-in;
           &:hover{
             transform: scale(1.02);
           }
         }
       }
-      #asspera{
-        #assperaImage{
-        }
-      }
-      #babasonicos{
-        #babasonicosImage{}
-      }
       #cosquin{
-        #cosquinImage{}
-      }
-      #curu{
-        #curuImage{}
-      }
-      #kapanga{
-        #kapangaImage{}
-      }
-      #koinoYokan{
-        #koinoYokanImage{}
-      }
-      #parraleños{
-        #parraleñosImage{}
-      }
-      #pastillasDelAbuelo{
-        #pastillasDelAbueloImage{}
+        #cosquinImage{
+          .imageMain{
+            img:nth-child(1){
+              width: 10%;
+            }
+          }
+        }
       }
       #pericos{
         #pericosImage{}
       }
-      #rataBlanca{
-        #rataBlancaImage{}
+      #koinoYokan{
+        #koinoYokanImage{}
+      }
+      #ntvg{
+        #ntvgImage{}
       }
       #renga{
         #rengaImage{}
       }
+      #rataBlanca{
+        #rataBlancaImage{}
+      }
       #skay{
         #skayImage{}
+      }
+      #babasonicos{
+        #babasonicosImage{}
+      }
+      #kapanga{
+        #kapangaImage{}
+      }
+      #pastillasDelAbuelo{
+        #pastillasDelAbueloImage{}
+      }
+      #parraleños{
+        #parraleñosImage{}
+      }
+      #asspera{
+        #assperaImage{
+        }
       }
     }
     .footer {

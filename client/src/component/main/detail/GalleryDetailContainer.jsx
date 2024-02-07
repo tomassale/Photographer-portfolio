@@ -1,13 +1,28 @@
-import { useParams } from 'react-router-dom'
+import { useParams, useLocation } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import GalleryDetail from './GalleryDetail'
-import importImages from '../../../util/importImages'
 
 const GalleryDetailContainer = () => {
+  const[imageUrls, setImageUrls] = useState([])
   const { _id } = useParams()
-  const images = importImages(_id)
+  console.log('http://localhost:3000'+useLocation().pathname)
+
+  useEffect(() => {
+    const fetchImageUrls = async () =>{
+      try{
+        const res = await fetch(`/img/${_id}`)
+        const imageFiles = await res.json()
+        setImageUrls(imageFiles.map(file => `/img/${_id}/${file}`))
+      } catch(e){
+        console.error('Error fetching images: ', e)
+      }
+    }  
+    fetchImageUrls()
+  },[_id])
+
   return (
     <div className='galleryDetailContainer'>
-      <GalleryDetail images={images}/>
+      <GalleryDetail images={imageUrls}/>
     </div>
   )
 }

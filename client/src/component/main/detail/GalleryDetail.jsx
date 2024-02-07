@@ -1,12 +1,13 @@
 const GalleryDetail = ({ images }) => {
-  if (!images || typeof images !== 'object' || Object.keys(images).length === 0) {
-    return <div>No images to display</div>;
-  }
   return (
     <>
-      {Object.values(images).map((src, index) => (
-        <img key={index} src={src} alt='imageGallery' />
-      ))}
+      {!images || typeof images !== 'object' || Object.keys(images).length === 0 ?(
+        <div>No images to display</div>
+      ):(
+        images.map((src, index) => (
+          <img key={index} src={src} alt='imageGallery' />
+        ))
+      )}
     </>
   )
 }
