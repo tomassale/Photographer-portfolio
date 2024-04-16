@@ -6,6 +6,7 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "type": "module",
   "scripts": {
     "test": "nodemon src/test/test.js",
     "start": "nodemon src/server.js"
@@ -21,6 +22,7 @@
     "winston": "^3.11.0"
   },
   "devDependencies": {
+    "multer": "^1.4.5-lts.1",
     "nodemon": "^3.0.3"
   }
 }

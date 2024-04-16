@@ -1,5 +1,5 @@
-const { MongoDbContainer } = require('../../container/mongoDBContainer')
-const artistModel = require('../../model/ArtistModel')
+import { MongoDbContainer } from '../../container/mongoDBContainer'
+import artistModel from '../../model/ArtistModel'
 class ArtistMongoDAO extends MongoDbContainer {
 
   constructor(url) {
@@ -22,4 +22,4 @@ class ArtistMongoDAO extends MongoDbContainer {
   }
 }
 
-module.exports = { ArtistMongoDAO }
+export default ArtistMongoDAO 

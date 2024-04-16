@@ -18,11 +18,23 @@
 //Mixins
 @mixin div {
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
+}
+
+@mixin titleMiddle {
+  color: #ffffff;
+  z-index: 5;
+  font-size: 75px;
+  opacity: 60%;
+  margin-top: 22%;
+  margin-left: 10%;
+/*   position: fixed;
+  top: 0;
+  left: 0; */
 }
 
 //Keyframes
-@keyframes animloader {
+@keyframes loader {
   0% {
     transform: scale(0);
     opacity: 1;
@@ -89,7 +101,7 @@ body{
         position: absolute;
         left: 0;
         top: 0;
-        animation: animloader 2s linear infinite;
+        animation: loader 2s linear infinite;
       }
       &::after{
         animation-delay: 1s;
@@ -121,38 +133,39 @@ body{
       }
     }
     .gallery{
-      h1{
-        color: #ffffff;
-      }
       .initial {
         @include div;
+        h1{
+          @include titleMiddle
+        }
       }
       .itemGallery{
+        .titleContainer{
+          h1{
+            @include titleMiddle;
+          }
+        }
         @include div;
         .imageMain{
-          //width: 33vw;
-          //height: 33vh;
+          width: 33vw;
+          height: 33vh;
           user-select: none;
-          -webkit-user-drag: none;            
-          &:hover{
-            transform: scale(1.02);
-          }
+          -webkit-user-drag: none;
         }
       }
       #cosquin{
         #cosquinImage{
-          .imageMain{
-            img:nth-child(1){
-              width: 10%;
-            }
+          img{
           }
         }
       }
       #pericos{
-        #pericosImage{}
+        #pericosImage{
+        }
       }
       #koinoYokan{
-        #koinoYokanImage{}
+        #koinoYokanImage{
+        }
       }
       #ntvg{
         #ntvgImage{}

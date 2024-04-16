@@ -1,5 +1,5 @@
-const artistFactory = require('../DAO/artist/daoFactoryArtist')
-const { Service } = require('./base/service')
+import artistFactory from '../DAO/artist/daoFactoryArtist'
+import Service from './base/service'
 
 class ArtistService extends Service {
   constructor(){
@@ -7,4 +7,4 @@ class ArtistService extends Service {
   }
 }
 
-module.exports = { ArtistService }
+export default ArtistService

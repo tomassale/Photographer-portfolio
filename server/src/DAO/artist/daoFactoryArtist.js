@@ -1,4 +1,4 @@
-const { ArtistMongoDAO } = require('./ArtistMongoDao.js')
+import ArtistMongoDAO  from './ArtistMongoDao.js'
 
 const artistFactory = (type = process.env.STORE) => {
   if (type === 'MONGO') {
@@ -6,4 +6,4 @@ const artistFactory = (type = process.env.STORE) => {
   }
 }
 
-module.exports = artistFactory
+export default artistFactory 

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom'
-import { ImageMovement } from '../../../util/ImageMovement';
-
+import { ImageMovement } from '../../../util/function';
+import TitleGallery from './TitleGallery';
 
 const ItemGallery = ({art}) => {
   const upper = art.title[0].toUpperCase() + art.title.slice(1)
@@ -13,12 +13,10 @@ const ItemGallery = ({art}) => {
 
   return (
     <div id={art.name} className='itemGallery'>
-      <div className='titleContainer'>
-        <h1>{art.title.toUpperCase()}</h1>
-      </div>
+      <TitleGallery title={art.title.toUpperCase()}/>
       <div id={`${art.name}Image`}>
         {[art.n1, art.n2, art.n3].map((index) => (
-          <NavLink to={`/Gallery/${art.name}`}>
+          <NavLink to={`/${art.name}`}>
             <img key={index} src={imageSrc(index)} className='imageMain' alt={`Imagen ${index} ${upper}`} />
           </NavLink>
         ))}

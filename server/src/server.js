@@ -1,9 +1,9 @@
 //Imports
-const express = require('express')
-const cors = require('cors')
+import express from 'express'
+import cors from 'cors'
 
 //Routes
-const { routerArtist } = require('./route/routeArtist')
+import { routerArtist } from './route/routeArtist'
 // const { routerDetail } = require('./route/routeDetail')
 // const { routerAdmin } = require('./route/routeAdmin') 
 
