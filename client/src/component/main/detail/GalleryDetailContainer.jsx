@@ -4,29 +4,30 @@ import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 const GalleryDetailContainer = () => {
-  const [imageUrls, setImageUrls] = useState([]);
-  const { folder } = useParams();
-  const { data, loading} = GetHook(`http://localhost:8080/test/${folder}`);
+  const [imageUrls, setImageUrls] = useState([])
+  const { folder } = useParams()
+  const { data, loading} = GetHook(`http://localhost:8080/${folder}`)
 
   useEffect(() => {
     if (Array.isArray(data)) {
-      setImageUrls(data);
+      setImageUrls(data)
     } else {
-      setImageUrls([]);
+      setImageUrls([])
     }
-  }, [data]);
+  }, [data])
 
   return (
     <>
       {loading ? (
         <div style={styleNoImage}>Loading...</div>
       ) : (
-        <div className='galleryDetailContainer'>
-          <GalleryDetail images={imageUrls} />
+        <div className='galleryDetail'>
+          <h1 className='titleFire'>{folder}</h1>
+          <GalleryDetail images={imageUrls} folders={folder} />
         </div>
       )}
     </>
-  );
+  )
 }
 
 const styleNoImage = {
@@ -34,6 +35,6 @@ const styleNoImage = {
   textAlign: 'center',
   fontSize: '40px',
   padding: '20px'
-};
+}
 
-export default GalleryDetailContainer;
+export default GalleryDetailContainer

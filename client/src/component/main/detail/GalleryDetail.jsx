@@ -1,5 +1,4 @@
-const GalleryDetail = ({ images }) => {
-  console.log('Recibiendo imágenes:', images);
+const GalleryDetail = ({ images, folders }) => {
   if (!Array.isArray(images)) {
     return <div>No images available</div>;
   }
@@ -7,7 +6,12 @@ const GalleryDetail = ({ images }) => {
   return (
     <>
       {images.map((image, index) => (
-        <img key={index} src={image} alt={`img${index}`} width={500} height={500} />
+        <img 
+          key={index} 
+          src={`/img/${folders}/${image}`} 
+          alt={`img${index}`}
+          className="itemDetail"
+        />
       ))}
     </>
   );

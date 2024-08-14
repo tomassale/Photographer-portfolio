@@ -28,9 +28,6 @@
   opacity: 60%;
   margin-top: 22%;
   margin-left: 10%;
-/*   position: fixed;
-  top: 0;
-  left: 0; */
 }
 
 //Keyframes
@@ -151,12 +148,12 @@ body{
           height: 33vh;
           user-select: none;
           -webkit-user-drag: none;
+          position: relative;
+          z-index: 0;
         }
       }
       #cosquin{
         #cosquinImage{
-          img{
-          }
         }
       }
       #pericos{
@@ -194,6 +191,18 @@ body{
       #asspera{
         #assperaImage{
         }
+      }
+    }
+    .galleryDetail{
+      .titleDetail {
+        margin: auto;
+        padding: auto;
+      }
+      .itemDetail{
+        display: inline-block;
+        width: 500px;
+        height: 500px;
+        padding: 25px;
       }
     }
     .footer {

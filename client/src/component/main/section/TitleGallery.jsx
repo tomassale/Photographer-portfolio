@@ -1,12 +1,8 @@
-import { useEffect, useRef, useState } from "react"
+//import { useEffect, useRef, useState } from "react"
 
 const TitleGallery = ({title}) => {
-  const titleRef = useRef(null)
-  const [showTitle, setShowTitle] = useState(false)
-
-  useEffect(() => {
-
-  }, []);
+  //const titleRef = useRef(null)
+  //const [showTitle, setShowTitle] = useState(false)
 
   return (
     <div className="titleContainer">

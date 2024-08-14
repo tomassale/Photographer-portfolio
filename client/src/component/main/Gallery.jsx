@@ -1,6 +1,6 @@
 import Initial from './section/Initial'
 import Loader from '../../util/Loader'
-import Artist from './section/ItemGallery'
+import ItemGallery from './section/ItemGallery'
 import artist from '../../data/artist.json'
 
 const Gallery = () => {
@@ -11,7 +11,7 @@ const Gallery = () => {
         <Loader/>
       ):(
         artist.map((obj) => {
-          return <Artist key={obj._id} art={obj}/>
+          return <ItemGallery key={obj._id} art={obj}/>
         })
       )}
     </div>
