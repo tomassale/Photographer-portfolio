@@ -17,11 +17,11 @@ a {
 // Mixins
 @mixin div {
   width: 100vw;
-  height: 120vh;
+  height: 136vh;
 }
 
 @mixin titleMiddle {
-  color: rgba(238, 238, 238, 0.8);
+  color: rgba(238, 238, 238, 1);
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   mix-blend-mode: color-dodge;
@@ -134,10 +134,16 @@ html {
       .initial {
         @include div;
         h1 {
-          @include titleMiddle;
+          color: rgba(238, 238, 238, 1);
+          mix-blend-mode: color-dodge;
+          font-size: 80px;
+          margin-left: 80px;
+          margin-top: 42vh;
+          z-index: 1;
         }
       }
       .itemGallery {
+        padding-top: 70px;
         .titleGallery {
           @include titleMiddle;
         }
@@ -146,14 +152,37 @@ html {
         }
         @include div;
         .imageMain {
-          width: 33vw;
-          height: 33vh;
+          display: block;
           user-select: none;
           -webkit-user-drag: none;
-          position: relative;
           z-index: 0;
         }
+        a:nth-child(1){
+          img{
+            margin-left: 200px;
+            margin-top: 100px;
+            width: 30vw;
+            height: 50vh;
+          }
+        }
+        a:nth-child(2){
+          img{
+            float: right;
+            margin-right: 70px;
+            width: 30vw;
+            height: 50vh;
+          }
+        }
+        a:nth-child(3){
+          img{
+            margin-top: 200px;
+            margin-left: 70px;
+            width: 30vw;
+            height: 50vh;
+          }
+        }
       }
+      //TODO agregar estilos
       #cosquin #cosquinImage,
       #pericos #pericosImage,
       #koinoYokan #koinoYokanImage,
@@ -166,7 +195,7 @@ html {
       #pastillasDelAbuelo #pastillasDelAbueloImage,
       #parraleños #parraleñosImage,
       #asspera #assperaImage {
-        // Personaliza según sea necesario
+
       }
     }
     .galleryDetail {
@@ -192,7 +221,8 @@ html {
     .footer {
       font-family: 'Playfair Display', serif;
       color: white;
-      height: 35vh;
+      height: 37vh;
+      margin-top: 100px;
       hr {
         width: 97vw;
         margin: auto;
@@ -214,7 +244,7 @@ html {
               margin-top: 10px;
               font-size: 18px;
               a {
-                border-bottom: 1px solid #ffffff;
+                text-align: center;
               }
             }
           }

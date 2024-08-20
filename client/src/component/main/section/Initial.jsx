@@ -1,4 +1,5 @@
 const Initial = () => {
+
   return (
     <div className="initial">
       <h1>SERGIO SALE</h1>

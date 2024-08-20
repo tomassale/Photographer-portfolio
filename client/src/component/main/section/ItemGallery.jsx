@@ -1,20 +1,20 @@
-import { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
-import { ImageMovement } from '../../../util/function';
-import TitleGallery from './TitleGallery';
-import IntersectionObserver from '../../../util/IntersectionObserver'; // Asegúrate de ajustar la ruta del import
+import { useEffect } from 'react'
+import { NavLink } from 'react-router-dom'
+import { ImageMovement } from '../../../util/function'
+import TitleGallery from './TitleGallery'
+import IntersectionObserver from '../../../util/IntersectionObserver'
 
 const ItemGallery = ({ art }) => {
-  const upper = art.title[0].toUpperCase() + art.title.slice(1);
-  const imageSrc = (index) => `./img/${art.name}/img${index}.jpg`;
+  const upper = art.title[0].toUpperCase() + art.title.slice(1)
+  const imageSrc = (index) => `./img/${art.name}/img${index}.jpg`
 
   const [ref, isIntersecting] = IntersectionObserver({
-    threshold: 0.1,
-  });
+    threshold: 0.42,
+  })
 
   useEffect(() => {
-    ImageMovement();
-  }, []);
+    ImageMovement()
+  }, [])
 
   return (
     <div id={art.name} className='itemGallery' ref={ref}>
@@ -24,15 +24,15 @@ const ItemGallery = ({ art }) => {
           <NavLink key={index} to={`/${art.name}`}>
             <img 
               key={index} 
-              src={imageSrc(index)} 
-              className='imageMain' 
+              src={imageSrc(index)}
+              className='imageMain'
               alt={`Imagen ${index} ${upper}`} 
             />
           </NavLink>
         ))}
       </div>
     </div>
-  );
+  )
 }
 
-export default ItemGallery;
+export default ItemGallery
