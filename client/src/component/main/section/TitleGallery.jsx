@@ -1,13 +1,8 @@
-//import { useEffect, useRef, useState } from "react"
-
-const TitleGallery = ({title}) => {
-  //const titleRef = useRef(null)
-  //const [showTitle, setShowTitle] = useState(false)
-
+const TitleGallery = ({ title, isVisible }) => {
   return (
-    <div className="titleContainer">
-      <h1>{title}</h1>
-    </div>
+    <h1 className={`titleGallery ${isVisible ? 'visible' : ''}`}>
+      {title}
+    </h1>
   )
 }
 

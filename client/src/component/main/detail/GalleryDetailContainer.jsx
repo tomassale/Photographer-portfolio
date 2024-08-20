@@ -17,24 +17,22 @@ const GalleryDetailContainer = () => {
   }, [data])
 
   return (
-    <>
+    <div className='galleryDetail'>
       {loading ? (
-        <div style={styleNoImage}>Loading...</div>
-      ) : (
-        <div className='galleryDetail'>
-          <h1 className='titleFire'>{folder}</h1>
-          <GalleryDetail images={imageUrls} folders={folder} />
+        <div className='loadingDetail'>
+          <p>Loading...</p>
         </div>
+      ) : (
+        <>
+          <h1 className='titleDetail'>{folder}</h1>
+          <GalleryDetail 
+            images={imageUrls} 
+            folders={folder}
+          />
+        </>
       )}
-    </>
+    </div>
   )
-}
-
-const styleNoImage = {
-  color: 'white',
-  textAlign: 'center',
-  fontSize: '40px',
-  padding: '20px'
 }
 
 export default GalleryDetailContainer
