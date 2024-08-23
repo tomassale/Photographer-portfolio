@@ -9,7 +9,7 @@ const GalleryDetail = ({ images, folders }) => {
       {images.map((image, index) => (
         <img 
           key={index}
-          src={`/img/${folders}/${image}`}
+          src={`/img/artist/${folders}/${image}`}
           alt={`img${index}`}
           className="itemDetail"
         />

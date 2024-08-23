@@ -6,7 +6,7 @@ import IntersectionObserver from '../../../util/IntersectionObserver'
 
 const ItemGallery = ({ art }) => {
   const upper = art.title[0].toUpperCase() + art.title.slice(1)
-  const imageSrc = (index) => `./img/${art.name}/img${index}.jpg`
+  const imageSrc = (index) => `./img/artist/${art.name}/img${index}.jpg`
 
   const [ref, isIntersecting] = IntersectionObserver({
     threshold: 0.42,

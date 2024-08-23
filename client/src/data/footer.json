@@ -24,9 +24,8 @@
     "_id": 2,
     "title": "Redes Sociales", 
     "links":[
-    {"_id":0, "link":"#link","content":"Lorem Ipsum"},
-    {"_id":1, "link":"https://sergiosale.myportfolio.com","content":"My portfolio"},
-    {"_id":2, "link":"https://www.instagram.com/sergioasale/","content":"@sergioasale"}
+    {"_id":0, "link":"https://sergiosale.myportfolio.com","content":"My portfolio"},
+    {"_id":1, "link":"https://www.instagram.com/sergioasale/","content":"@sergioasale"}
     ]
   }
 ]
